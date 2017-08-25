@@ -1,0 +1,31 @@
+AllCops:
+  TargetRubyVersion: 2.0
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 30
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/AbcSize:
+  Max: 20
+
+Style/FileName:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Exclude:
+    - "spec/**_spec.rb"
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**_spec.rb"
