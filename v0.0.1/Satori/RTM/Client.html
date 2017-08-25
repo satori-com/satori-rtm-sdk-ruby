@@ -1,0 +1,3619 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Satori::RTM::Client
+  
+    &mdash; Documentation by YARD 0.9.9
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Satori::RTM::Client";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Satori.html" title="Satori (module)">Satori</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../RTM.html" title="Satori::RTM (module)">RTM</a></span></span>
+     &raquo; 
+    <span class="title">Client</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Satori::RTM::Client
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Satori::RTM::Client</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="Logger.html" title="Satori::RTM::Logger (module)">Logger</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/satori-rtm-sdk/client.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>The client that an application uses for accessing RTM.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="Logger.html" title="Satori::RTM::Logger (module)">Logger</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Logger.html#ENV_FLAG-constant" title="Satori::RTM::Logger::ENV_FLAG (constant)">Logger::ENV_FLAG</a></span></p>
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#transport-instance_method" title="#transport (instance method)">#<strong>transport</strong>  &#x21d2; WebSocket </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The WebSocket connection.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      I/O
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#close-instance_method" title="#close (instance method)">#<strong>close</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Closes gracefully the connection to Satori RTM.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#connect-instance_method" title="#connect (instance method)">#<strong>connect</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Connects to Satori RTM.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#connected%3F-instance_method" title="#connected? (instance method)">#<strong>connected?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns <code>true</code> if the client is connected.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#onclose-instance_method" title="#onclose (instance method)">#<strong>onclose</strong> {|close_event| ... } &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a callback to call when the client is disconnected or not able to
+connect to Satori RTM.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#onopen-instance_method" title="#onopen (instance method)">#<strong>onopen</strong> { ... } &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a callback to call when the client is successfully connected to
+Satori RTM.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sock_read-instance_method" title="#sock_read (instance method)">#<strong>sock_read</strong>(opts = {})  &#x21d2; :ok, :timeout </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Reads from an WebSocket with an optional timeout.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sock_read_nonblock-instance_method" title="#sock_read_nonblock (instance method)">#<strong>sock_read_nonblock</strong>  &#x21d2; :ok, :would_block </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Reads from an WebSocket in a non-blocking mode.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sock_read_repeatedly-instance_method" title="#sock_read_repeatedly (instance method)">#<strong>sock_read_repeatedly</strong>(opts = {})  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Reads repeatedly from an WebSocket.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#wait_all_replies-instance_method" title="#wait_all_replies (instance method)">#<strong>wait_all_replies</strong>(opts = {})  &#x21d2; :ok, :timeout </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Wait for all RTM replies for all pending requests.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Satori RTM operations
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#authenticate-instance_method" title="#authenticate (instance method)">#<strong>authenticate</strong>(role, secret) {|reply| ... } &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Authenticates a user with specific role and secret.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete-instance_method" title="#delete (instance method)">#<strong>delete</strong>(channel) {|reply| ... } &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Deletes the value of the specified key from the key-value store.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#publish-instance_method" title="#publish (instance method)">#<strong>publish</strong>(channel, message) {|reply| ... } &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Publishes a message to a channel.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#read-instance_method" title="#read (instance method)">#<strong>read</strong>(channel, opts = {}) {|reply| ... } &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Reads a message in a channel.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#subscribe-instance_method" title="#subscribe (instance method)">#<strong>subscribe</strong>(sid, opts = {}) {|ctx, event| ... } &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Subscribes to a channel.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unsubscribe-instance_method" title="#unsubscribe (instance method)">#<strong>unsubscribe</strong>(sid) {|reply| ... } &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Unsubscribes the subscription with the specific
+<code>subscription_id</code>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#write-instance_method" title="#write (instance method)">#<strong>write</strong>(channel, message) {|reply| ... } &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Writes the value of the specified key from the key-value store.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(endpoint, appkey, opts = {})  &#x21d2; Client </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a new instance of Client.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Logger.html" title="Satori::RTM::Logger (module)">Logger</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Logger.html#create_logger-class_method" title="Satori::RTM::Logger.create_logger (method)">create_logger</a></span>, <span class='object_link'><a href="Logger.html#default_level-class_method" title="Satori::RTM::Logger.default_level (method)">default_level</a></span>, <span class='object_link'><a href="Logger.html#included-class_method" title="Satori::RTM::Logger.included (method)">included</a></span>, <span class='object_link'><a href="Logger.html#logger-class_method" title="Satori::RTM::Logger.logger (method)">logger</a></span>, <span class='object_link'><a href="Logger.html#use_logger-class_method" title="Satori::RTM::Logger.use_logger (method)">use_logger</a></span>, <span class='object_link'><a href="Logger.html#use_std_logger-class_method" title="Satori::RTM::Logger.use_std_logger (method)">use_std_logger</a></span></p>
+
+  
+  
+  
+  
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(endpoint, appkey, opts = {})  &#x21d2; <tt><span class='object_link'><a href="" title="Satori::RTM::Client (class)">Client</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of Client.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>endpoint</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>RTM endpoint</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>appkey</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>appkey used to access RTM</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>options to create a client with.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>opts</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:transport</span>
+          <span class="type">(<tt><span class='object_link'><a href="WebSocket.html" title="Satori::RTM::WebSocket (class)">WebSocket</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>WebSocket connection implementation to use</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/satori-rtm-sdk/client.rb', line 23</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_endpoint'>endpoint</span><span class='comma'>,</span> <span class='id identifier rubyid_appkey'>appkey</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='ivar'>@waiters</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='ivar'>@subscriptions</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='ivar'>@url</span> <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='id identifier rubyid_endpoint'>endpoint</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>v2?appkey=</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_appkey'>appkey</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='ivar'>@id</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='ivar'>@encoder</span> <span class='op'>=</span> <span class='const'>JsonCodec</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='ivar'>@transport</span> <span class='op'>=</span> <span class='id identifier rubyid_init_transport'>init_transport</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span>
+  <span class='ivar'>@state</span> <span class='op'>=</span> <span class='symbol'>:init</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="transport-instance_method">
+  
+    #<strong>transport</strong>  &#x21d2; <tt><span class='object_link'><a href="WebSocket.html" title="Satori::RTM::WebSocket (class)">WebSocket</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the WebSocket connection</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="WebSocket.html" title="Satori::RTM::WebSocket (class)">WebSocket</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the WebSocket connection</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/satori-rtm-sdk/client.rb', line 10</span>
+
+<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="Satori::RTM::Client (class)">Client</a></span></span>
+  <span class='id identifier rubyid_include'>include</span> <span class='const'>EventEmitter</span>
+  <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="Logger.html" title="Satori::RTM::Logger (module)">Logger</a></span></span>
+
+  <span class='id identifier rubyid_attr_reader'>attr_reader</span> <span class='symbol'>:transport</span>
+  <span class='id identifier rubyid_private'>private</span> <span class='symbol'>:on</span><span class='comma'>,</span> <span class='symbol'>:fire</span>
+
+  <span class='comment'># Returns a new instance of Client.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param endpoint [String] RTM endpoint
+</span>  <span class='comment'># @param appkey [String] appkey used to access RTM
+</span>  <span class='comment'># @param opts [Hash] options to create a client with.
+</span>  <span class='comment'># @option opts [WebSocket] :transport WebSocket connection implementation to use
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_endpoint'>endpoint</span><span class='comma'>,</span> <span class='id identifier rubyid_appkey'>appkey</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+    <span class='ivar'>@waiters</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='ivar'>@subscriptions</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='ivar'>@url</span> <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='id identifier rubyid_endpoint'>endpoint</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>v2?appkey=</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_appkey'>appkey</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+    <span class='ivar'>@id</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='ivar'>@encoder</span> <span class='op'>=</span> <span class='const'>JsonCodec</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@transport</span> <span class='op'>=</span> <span class='id identifier rubyid_init_transport'>init_transport</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span>
+    <span class='ivar'>@state</span> <span class='op'>=</span> <span class='symbol'>:init</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># @!group I/O
+</span>
+  <span class='comment'># Connects to Satori RTM.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @raise [ConnectionError] network error occurred when connecting
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_connect'>connect</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ConnectionError.html" title="Satori::RTM::ConnectionError (class)">ConnectionError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Client is a single-use object. You can&#39;t connect twice.</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@state</span> <span class='op'>!=</span> <span class='symbol'>:init</span>
+    <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>connecting to </span><span class='embexpr_beg'>#{</span><span class='ivar'>@url</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='ivar'>@transport</span><span class='period'>.</span><span class='id identifier rubyid_connect'>connect</span><span class='lparen'>(</span><span class='ivar'>@url</span><span class='rparen'>)</span>
+  <span class='kw'>rescue</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='comment'># generate websocket close event
+</span>    <span class='id identifier rubyid_on_websocket_close'>on_websocket_close</span><span class='lparen'>(</span><span class='int'>1006</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Connect exception: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='id identifier rubyid_e'>e</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Defines a callback to call when the client is successfully connected to Satori RTM.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @yield Calls when client is connected
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_onopen'>onopen</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_on'>on</span> <span class='symbol'>:open</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Defines a callback to call when the client is disconnected or not able to connect to Satori RTM.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># If a client is not able to connect, a +onclose+ yields too with a reason.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @yield Calls when client is disconnected or not able to connect
+</span>  <span class='comment'># @yieldparam close_event [CloseEvent] reason why client was closed
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_onclose'>onclose</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_on'>on</span> <span class='symbol'>:close</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Returns +true+ if the client is connected.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Boolean] +true+ if connected, +false+ otherwise
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_connected?'>connected?</span>
+    <span class='ivar'>@state</span> <span class='op'>==</span> <span class='symbol'>:open</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Closes gracefully the connection to Satori RTM.
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_close'>close</span>
+    <span class='ivar'>@transport</span><span class='period'>.</span><span class='id identifier rubyid_close'>close</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Reads from an WebSocket with an optional timeout.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># If timeout is greater than zero, it specifies a maximum interval (in seconds)
+</span>  <span class='comment'># to wait for any incoming WebSocket frames. If timeout is zero,
+</span>  <span class='comment'># then the method returns without blocking. If the timeout is less
+</span>  <span class='comment'># than zero, the method blocks indefinitely.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param opts [Hash] additional options
+</span>  <span class='comment'># @option opts [Integer] :timeout_in_secs (-1) timeout for a read operation
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @raise [ConnectionError] network error occurred when reading data
+</span>  <span class='comment'># @return [:ok] read successfully reads data from WebSocket
+</span>  <span class='comment'># @return [:timeout] a blocking operation times out
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_sock_read'>sock_read</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_timeout_in_secs'>timeout_in_secs</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:timeout_in_secs</span><span class='comma'>,</span> <span class='op'>-</span><span class='int'>1</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_timeout_in_secs'>timeout_in_secs</span> <span class='op'>&gt;=</span> <span class='int'>0</span>
+      <span class='ivar'>@transport</span><span class='period'>.</span><span class='id identifier rubyid_read_with_timeout'>read_with_timeout</span><span class='lparen'>(</span><span class='id identifier rubyid_timeout_in_secs'>timeout_in_secs</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='ivar'>@transport</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Reads from an WebSocket in a non-blocking mode.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @raise [ConnectionError] network error occurred when reading data
+</span>  <span class='comment'># @return [:ok] read successfully reads data from WebSocket
+</span>  <span class='comment'># @return [:would_block] read buffer is empty
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_sock_read_nonblock'>sock_read_nonblock</span>
+    <span class='ivar'>@transport</span><span class='period'>.</span><span class='id identifier rubyid_read_nonblock'>read_nonblock</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Reads repeatedly from an WebSocket.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># This method repeatedly reads from an WebSocket during a specified
+</span>  <span class='comment'># time (in seconds). If duration time is greater then zero, then the
+</span>  <span class='comment'># method blocks for the duration time and reads repeatedly all
+</span>  <span class='comment'># incoming WebSocket frames. If duration time is less than zero, the
+</span>  <span class='comment'># method blocks indefinitely.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param opts [Hash] additional options
+</span>  <span class='comment'># @option opts [Integer] :duration_in_secs (-1) duration interval
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @raise [ConnectionError] network error occurred when reading data
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_sock_read_repeatedly'>sock_read_repeatedly</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_duration_in_secs'>duration_in_secs</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:duration_in_secs</span><span class='comma'>,</span> <span class='op'>-</span><span class='int'>1</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_start'>start</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
+    <span class='id identifier rubyid_loop'>loop</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_diff'>diff</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='op'>-</span> <span class='id identifier rubyid_start'>start</span><span class='rparen'>)</span>
+      <span class='kw'>break</span> <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_duration_in_secs'>duration_in_secs</span> <span class='op'>&gt;=</span> <span class='int'>0</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_duration_in_secs'>duration_in_secs</span> <span class='op'>&lt;=</span> <span class='id identifier rubyid_diff'>diff</span><span class='rparen'>)</span>
+      <span class='ivar'>@transport</span><span class='period'>.</span><span class='id identifier rubyid_read_with_timeout'>read_with_timeout</span><span class='lparen'>(</span><span class='id identifier rubyid_duration_in_secs'>duration_in_secs</span> <span class='op'>-</span> <span class='id identifier rubyid_diff'>diff</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Wait for all RTM replies for all pending requests.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># This method blocks until all RTM replies are received for all
+</span>  <span class='comment'># pending requests.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># If timeout is greater than zero, it specifies a maximum interval (in seconds)
+</span>  <span class='comment'># to wait for any incoming WebSocket frames.  If the timeout is less
+</span>  <span class='comment'># than zero, the method blocks indefinitely.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @note if user&#39;s callback for a reply sends new RTM request
+</span>  <span class='comment'># then this method waits it too.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param opts [Hash] additional options
+</span>  <span class='comment'># @option opts [Integer] :timeout_in_secs (-1) timeout for an operation
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @raise [ConnectionError] network error occurred when reading data
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [:ok] all replies are received
+</span>  <span class='comment'># @return [:timeout] a blocking operation times out
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_wait_all_replies'>wait_all_replies</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_timeout_in_secs'>timeout_in_secs</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:timeout_in_secs</span><span class='comma'>,</span> <span class='op'>-</span><span class='int'>1</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_start'>start</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
+    <span class='id identifier rubyid_rc'>rc</span> <span class='op'>=</span> <span class='symbol'>:ok</span>
+    <span class='id identifier rubyid_loop'>loop</span> <span class='kw'>do</span>
+      <span class='kw'>break</span> <span class='kw'>if</span> <span class='ivar'>@waiters</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+
+      <span class='kw'>if</span> <span class='id identifier rubyid_timeout_in_secs'>timeout_in_secs</span> <span class='op'>&gt;=</span> <span class='int'>0</span>
+        <span class='id identifier rubyid_diff'>diff</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='op'>-</span> <span class='id identifier rubyid_start'>start</span><span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_timeout_in_secs'>timeout_in_secs</span> <span class='op'>&lt;=</span> <span class='id identifier rubyid_diff'>diff</span>
+          <span class='id identifier rubyid_rc'>rc</span> <span class='op'>=</span> <span class='symbol'>:timeout</span>
+          <span class='kw'>break</span>
+        <span class='kw'>end</span>
+        <span class='ivar'>@transport</span><span class='period'>.</span><span class='id identifier rubyid_read_with_timeout'>read_with_timeout</span><span class='lparen'>(</span><span class='id identifier rubyid_timeout_in_secs'>timeout_in_secs</span> <span class='op'>-</span> <span class='id identifier rubyid_diff'>diff</span><span class='rparen'>)</span>
+      <span class='kw'>else</span>
+        <span class='ivar'>@transport</span><span class='period'>.</span><span class='id identifier rubyid_read_with_timeout'>read_with_timeout</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_rc'>rc</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># @!endgroup
+</span>
+  <span class='comment'># @!group Satori RTM operations
+</span>
+  <span class='comment'># Publishes a message to a channel.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param channel [String] name of the channel
+</span>  <span class='comment'># @param message [Object] message to publish
+</span>  <span class='comment'># @yield Callback for an RTM reply. If the block is not given, then
+</span>  <span class='comment'>#   no reply will be sent to a client, regardless of the outcome
+</span>  <span class='comment'># @yieldparam reply [BaseReply] RTM reply for delete request
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_publish'>publish</span><span class='lparen'>(</span><span class='id identifier rubyid_channel'>channel</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_publish_opts'>publish_opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+      <span class='label'>channel:</span> <span class='id identifier rubyid_channel'>channel</span><span class='comma'>,</span>
+      <span class='label'>message:</span> <span class='id identifier rubyid_message'>message</span>
+    <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_send_r'>send_r</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rtm/publish</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_publish_opts'>publish_opts</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Reads a message in a channel.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># RTM returns the message at the position specified in the request.
+</span>  <span class='comment'># If there is no position specified, RTM defaults to the position of
+</span>  <span class='comment'># the latest message in the channel. A +null+ message in the reply
+</span>  <span class='comment'># PDU means that there were no messages at that position.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param channel [String] name of the channel
+</span>  <span class='comment'># @param opts [Hash] additional options for +rtm/read+ request
+</span>  <span class='comment'># @yield Callback for an RTM reply. If the block is not given, then
+</span>  <span class='comment'>#   no reply will be sent to a client, regardless of the outcome
+</span>  <span class='comment'># @yieldparam reply [BaseReply] RTM reply for delete request
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_channel'>channel</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_read_opts'>read_opts</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span> <span class='label'>channel:</span> <span class='id identifier rubyid_channel'>channel</span>
+    <span class='id identifier rubyid_send_r'>send_r</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rtm/read</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_read_opts'>read_opts</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Writes the value of the specified key from the key-value store.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># Key is represented by a channel. In current RTM implementation
+</span>  <span class='comment'># write operation is the same as publish operation.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param channel [String] name of the channel
+</span>  <span class='comment'># @param message [Object] message to write
+</span>  <span class='comment'># @yield Callback for an RTM reply. If the block is not given, then
+</span>  <span class='comment'>#   no reply will be sent to a client, regardless of the outcome
+</span>  <span class='comment'># @yieldparam reply [BaseReply] RTM reply for delete request
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span><span class='id identifier rubyid_channel'>channel</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_write_opts'>write_opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+      <span class='label'>channel:</span> <span class='id identifier rubyid_channel'>channel</span><span class='comma'>,</span>
+      <span class='label'>message:</span> <span class='id identifier rubyid_message'>message</span>
+    <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_send_r'>send_r</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rtm/write</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_write_opts'>write_opts</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Deletes the value of the specified key from the key-value store.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># Key is represented by a channel, and only the last message in the
+</span>  <span class='comment'># channel is relevant (represents the value). Hence, publishing a +null+
+</span>  <span class='comment'># value, serves as deletion of the the previous value (if any). Delete request
+</span>  <span class='comment'># is the same as publishing or writing a null value to the channel.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param channel [String] name of the channel
+</span>  <span class='comment'># @yield Callback for an RTM reply. If the block is not given, then
+</span>  <span class='comment'>#   no reply will be sent to a client, regardless of the outcome
+</span>  <span class='comment'># @yieldparam reply [BaseReply] RTM reply for delete request
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_channel'>channel</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_delete_opts'>delete_opts</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>channel:</span> <span class='id identifier rubyid_channel'>channel</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_send_r'>send_r</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rtm/delete</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_delete_opts'>delete_opts</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Subscribes to a channel
+</span>  <span class='comment'>#
+</span>  <span class='comment'># When you create a subscription, you can specify additional subscription options (e.g. history or view).
+</span>  <span class='comment'># Full list of subscription option you could find in RTM API specification.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># Satori SDK informs an user about any subscription state changes by calling block with proper event.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @see SubscriptionEvent Information about subscription events
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param sid [String] subscription id
+</span>  <span class='comment'># @param opts [Hash] additional options for +rtm/subscribe+ request
+</span>  <span class='comment'># @yield RTM subscription callback
+</span>  <span class='comment'># @yieldparam ctx [SubscriptionContext] current subscription context
+</span>  <span class='comment'># @yieldparam event [SubscriptionEvent] subscription event
+</span>  <span class='comment'># @return [void]
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#   client.subscribe &#39;animals&#39; do |_ctx, event|
+</span>  <span class='comment'>#     case event.type
+</span>  <span class='comment'>#     when :subscribed
+</span>  <span class='comment'>#       puts &quot;Subscribed to the channel: #{event.data[:subscription_id]}&quot;
+</span>  <span class='comment'>#     when :data
+</span>  <span class='comment'>#       event.data[:messages].each { |msg| puts &quot;Message is received #{msg}&quot; }
+</span>  <span class='comment'>#     when :error
+</span>  <span class='comment'>#       puts &quot;Subscription error: #{event.data[:error]} -- #{event.data[:reason]}&quot;
+</span>  <span class='comment'>#     end
+</span>  <span class='comment'>#   end
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_subscribe'>subscribe</span><span class='lparen'>(</span><span class='id identifier rubyid_sid'>sid</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_request_opts'>request_opts</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span> <span class='label'>subscription_id:</span> <span class='id identifier rubyid_sid'>sid</span>
+    <span class='id identifier rubyid_request_opts'>request_opts</span><span class='lbracket'>[</span><span class='symbol'>:channel</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_sid'>sid</span> <span class='kw'>unless</span> <span class='qsymbols_beg'>%i[</span><span class='tstring_content'>filter</span><span class='words_sep'> </span><span class='tstring_content'>view</span><span class='words_sep'>]</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+
+    <span class='id identifier rubyid_context'>context</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SubscriptionContext.html" title="Satori::RTM::SubscriptionContext (class)">SubscriptionContext</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SubscriptionContext.html#initialize-instance_method" title="Satori::RTM::SubscriptionContext#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_sid'>sid</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span><span class='comma'>,</span> <span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_init_reply'>init_reply</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SubscriptionEvent.html" title="Satori::RTM::SubscriptionEvent (class)">SubscriptionEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SubscriptionEvent.html#initialize-instance_method" title="Satori::RTM::SubscriptionEvent#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:init</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_fn'>fn</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_context'>context</span><span class='comma'>,</span> <span class='id identifier rubyid_init_reply'>init_reply</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rtm/subscribe</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_request_opts'>request_opts</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='op'>|</span>
+      <span class='id identifier rubyid_reply'>reply</span> <span class='op'>=</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_handle_data'>handle_data</span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+
+      <span class='kw'>if</span> <span class='ivar'>@subscriptions</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_sid'>sid</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@subscriptions</span><span class='lbracket'>[</span><span class='id identifier rubyid_sid'>sid</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='id identifier rubyid_context'>context</span>
+        <span class='id identifier rubyid_prev_sub'>prev_sub</span> <span class='op'>=</span> <span class='ivar'>@subscriptions</span><span class='lbracket'>[</span><span class='id identifier rubyid_sid'>sid</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_prev_sub'>prev_sub</span><span class='period'>.</span><span class='id identifier rubyid_mark_as_resubscribed'>mark_as_resubscribed</span>
+      <span class='kw'>end</span>
+
+      <span class='ivar'>@subscriptions</span><span class='lbracket'>[</span><span class='id identifier rubyid_sid'>sid</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_context'>context</span> <span class='kw'>if</span> <span class='id identifier rubyid_reply'>reply</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='symbol'>:subscribed</span>
+
+      <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_fn'>fn</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_context'>context</span><span class='comma'>,</span> <span class='id identifier rubyid_reply'>reply</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Unsubscribes the subscription with the specific +subscription_id+
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param sid [String] subscription id
+</span>  <span class='comment'># @yield Callback for an RTM reply
+</span>  <span class='comment'># @yieldparam reply [BaseReply] RTM reply for authenticate request
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_unsubscribe'>unsubscribe</span><span class='lparen'>(</span><span class='id identifier rubyid_sid'>sid</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_request_opts'>request_opts</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>subscription_id:</span> <span class='id identifier rubyid_sid'>sid</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rtm/unsubscribe</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_request_opts'>request_opts</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='op'>|</span>
+      <span class='id identifier rubyid_context'>context</span> <span class='op'>=</span> <span class='ivar'>@subscriptions</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_sid'>sid</span><span class='rparen'>)</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_context'>context</span>
+        <span class='id identifier rubyid_reply'>reply</span> <span class='op'>=</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_handle_data'>handle_data</span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_fn'>fn</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_context'>context</span><span class='comma'>,</span> <span class='id identifier rubyid_reply'>reply</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+      <span class='comment'># pass base reply to unsubscribe block
+</span>      <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="BaseReply.html" title="Satori::RTM::BaseReply (class)">BaseReply</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="BaseReply.html#initialize-instance_method" title="Satori::RTM::BaseReply#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Authenticates a user with specific role and secret.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># Authentication is based on the +HMAC+ algorithm with +MD5+ hashing routine:
+</span>  <span class='comment'># * The SDK obtains a nonce from the RTM in a handshake request
+</span>  <span class='comment'># * The SDK then sends an authorization request with its role secret
+</span>  <span class='comment'>#   key hashed with the received nonce
+</span>  <span class='comment'>#
+</span>  <span class='comment'># If authentication is failed then reason is passed to the yield block. In
+</span>  <span class='comment'># case of success the +rtm/authenticate+ reply is passed to the yield block.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># Use Dev Portal to obtain the role and secret key for your application.
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param role [String] role name
+</span>  <span class='comment'># @param secret [String] role secret
+</span>  <span class='comment'># @yield Callback for an RTM reply
+</span>  <span class='comment'># @yieldparam reply [BaseReply] RTM reply for authenticate request
+</span>  <span class='comment'># @return [void]
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#   client.authenticate role, role_secret do |reply|
+</span>  <span class='comment'>#     raise &quot;Failed to authenticate: #{reply.data[:error]} -- #{reply.data[:reason]}&quot; unless reply.success?
+</span>  <span class='comment'>#   end
+</span>  <span class='comment'>#   client.wait_all_replies
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_authenticate'>authenticate</span><span class='lparen'>(</span><span class='id identifier rubyid_role'>role</span><span class='comma'>,</span> <span class='id identifier rubyid_secret'>secret</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_handshake_opts'>handshake_opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+      <span class='label'>method:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>role_secret</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='label'>data:</span> <span class='lbrace'>{</span> <span class='label'>role:</span> <span class='id identifier rubyid_role'>role</span> <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_send_r'>send_r</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>auth/handshake</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_handshake_opts'>handshake_opts</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_reply'>reply</span><span class='op'>|</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_reply'>reply</span><span class='period'>.</span><span class='id identifier rubyid_success?'>success?</span>
+        <span class='id identifier rubyid_hash'>hash</span> <span class='op'>=</span> <span class='id identifier rubyid_hmac_md5'>hmac_md5</span><span class='lparen'>(</span><span class='id identifier rubyid_reply'>reply</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:data</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:nonce</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_secret'>secret</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_authenticate_opts'>authenticate_opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+          <span class='label'>method:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>role_secret</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+          <span class='label'>credentials:</span> <span class='lbrace'>{</span> <span class='label'>hash:</span> <span class='id identifier rubyid_hash'>hash</span> <span class='rbrace'>}</span>
+        <span class='rbrace'>}</span>
+        <span class='id identifier rubyid_send_r'>send_r</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>auth/authenticate</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_authenticate_opts'>authenticate_opts</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_auth_reply'>auth_reply</span><span class='op'>|</span>
+          <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_auth_reply'>auth_reply</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+      <span class='kw'>else</span>
+        <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_reply'>reply</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># @!endgroup
+</span>
+  <span class='id identifier rubyid_private'>private</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_pdu_to_reply_adapter'>pdu_to_reply_adapter</span><span class='lparen'>(</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_fn'>fn</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+    <span class='id identifier rubyid_proc'>proc</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='op'>|</span>
+      <span class='id identifier rubyid_reply'>reply</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="BaseReply.html" title="Satori::RTM::BaseReply (class)">BaseReply</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="BaseReply.html#initialize-instance_method" title="Satori::RTM::BaseReply#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_fn'>fn</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_reply'>reply</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_send_r'>send_r</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='comma'>,</span> <span class='id identifier rubyid_body'>body</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='comma'>,</span> <span class='id identifier rubyid_body'>body</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_pdu_to_reply_adapter'>pdu_to_reply_adapter</span><span class='lparen'>(</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='comma'>,</span> <span class='id identifier rubyid_body'>body</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_pdu'>pdu</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>action:</span> <span class='id identifier rubyid_action'>action</span><span class='comma'>,</span> <span class='label'>body:</span> <span class='id identifier rubyid_body'>body</span> <span class='rbrace'>}</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+      <span class='id identifier rubyid_pdu'>pdu</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_gen_next_id'>gen_next_id</span>
+      <span class='ivar'>@waiters</span><span class='lbracket'>[</span><span class='id identifier rubyid_pdu'>pdu</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_block'>block</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-&gt; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_pdu'>pdu</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='ivar'>@encoder</span><span class='period'>.</span><span class='id identifier rubyid_encode'>encode</span><span class='lparen'>(</span><span class='id identifier rubyid_pdu'>pdu</span><span class='rparen'>)</span>
+    <span class='ivar'>@transport</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='label'>type:</span> <span class='symbol'>:text</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_gen_next_id'>gen_next_id</span>
+    <span class='ivar'>@id</span> <span class='op'>+=</span> <span class='int'>1</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_on_websocket_open'>on_websocket_open</span>
+    <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>connection is opened</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='ivar'>@state</span> <span class='op'>=</span> <span class='symbol'>:open</span>
+    <span class='id identifier rubyid_fire'>fire</span><span class='lparen'>(</span><span class='symbol'>:open</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_on_websocket_close'>on_websocket_close</span><span class='lparen'>(</span><span class='id identifier rubyid_code'>code</span><span class='comma'>,</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@state</span> <span class='op'>==</span> <span class='symbol'>:close</span>
+    <span class='ivar'>@state</span> <span class='op'>=</span> <span class='symbol'>:close</span>
+    <span class='id identifier rubyid_is_normal'>is_normal</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_code'>code</span> <span class='op'>==</span> <span class='int'>1000</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_is_normal'>is_normal</span>
+      <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>connection is closed normally</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>connection is closed with code: &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_code'>code</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39; -- &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_reason'>reason</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_pass_disconnect_to_all_callbacks'>pass_disconnect_to_all_callbacks</span>
+
+    <span class='ivar'>@waiters</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='ivar'>@subscriptions</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+
+    <span class='id identifier rubyid_fire'>fire</span><span class='lparen'>(</span><span class='symbol'>:close</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="CloseEvent.html" title="Satori::RTM::CloseEvent (class)">CloseEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="CloseEvent.html#initialize-instance_method" title="Satori::RTM::CloseEvent#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_code'>code</span><span class='comma'>,</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_pass_disconnect_to_all_callbacks'>pass_disconnect_to_all_callbacks</span>
+    <span class='id identifier rubyid_err'>err</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>error:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>disconnect</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Connection is closed</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
+
+    <span class='ivar'>@waiters</span><span class='period'>.</span><span class='id identifier rubyid_sort_by'>sort_by</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:first</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid_fn'>fn</span><span class='op'>|</span>
+      <span class='id identifier rubyid_safe_call'>safe_call</span><span class='lparen'>(</span><span class='id identifier rubyid_fn'>fn</span><span class='comma'>,</span> <span class='symbol'>:disconnect</span><span class='comma'>,</span> <span class='id identifier rubyid_err'>err</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@subscriptions</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid_context'>context</span><span class='op'>|</span>
+      <span class='id identifier rubyid_reply'>reply</span> <span class='op'>=</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_handle_data'>handle_data</span><span class='lparen'>(</span><span class='symbol'>:disconnect</span><span class='comma'>,</span> <span class='id identifier rubyid_err'>err</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_safe_call'>safe_call</span><span class='lparen'>(</span><span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_fn'>fn</span><span class='comma'>,</span> <span class='id identifier rubyid_context'>context</span><span class='comma'>,</span> <span class='id identifier rubyid_reply'>reply</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_on_websocket_message'>on_websocket_message</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='id identifier rubyid__type'>_type</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_pdu'>pdu</span> <span class='op'>=</span> <span class='ivar'>@encoder</span><span class='period'>.</span><span class='id identifier rubyid_decode'>decode</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;- </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_pdu'>pdu</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_id'>id</span> <span class='op'>=</span> <span class='id identifier rubyid_pdu'>pdu</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+      <span class='id identifier rubyid_on_unsolicited_pdu'>on_unsolicited_pdu</span><span class='lparen'>(</span><span class='id identifier rubyid_pdu'>pdu</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_fn'>fn</span> <span class='op'>=</span> <span class='ivar'>@waiters</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_fn'>fn</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='symbol'>:pdu</span><span class='comma'>,</span> <span class='id identifier rubyid_pdu'>pdu</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_fn'>fn</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_on_unsolicited_pdu'>on_unsolicited_pdu</span><span class='lparen'>(</span><span class='id identifier rubyid_pdu'>pdu</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_pdu'>pdu</span><span class='lbracket'>[</span><span class='symbol'>:action</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/error</span><span class='tstring_end'>&#39;</span></span>
+      <span class='id identifier rubyid_reason'>reason</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Unclassified RTM error is received: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_pdu'>pdu</span><span class='lbracket'>[</span><span class='symbol'>:body</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:error</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> -- </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_pdu'>pdu</span><span class='lbracket'>[</span><span class='symbol'>:body</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:reason</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+      <span class='ivar'>@transport</span><span class='period'>.</span><span class='id identifier rubyid_close'>close</span> <span class='int'>1008</span><span class='comma'>,</span> <span class='id identifier rubyid_reason'>reason</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_pdu'>pdu</span><span class='lbracket'>[</span><span class='symbol'>:action</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_start_with?'>start_with?</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rtm/subscription</span><span class='tstring_end'>&#39;</span></span>
+      <span class='id identifier rubyid_sid'>sid</span> <span class='op'>=</span> <span class='id identifier rubyid_pdu'>pdu</span><span class='lbracket'>[</span><span class='symbol'>:body</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:subscription_id</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_context'>context</span> <span class='op'>=</span> <span class='ivar'>@subscriptions</span><span class='lbracket'>[</span><span class='id identifier rubyid_sid'>sid</span><span class='rbracket'>]</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_context'>context</span>
+        <span class='id identifier rubyid_reply'>reply</span> <span class='op'>=</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_handle_data'>handle_data</span><span class='lparen'>(</span><span class='symbol'>:pdu</span><span class='comma'>,</span> <span class='id identifier rubyid_pdu'>pdu</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_fn'>fn</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_context'>context</span><span class='comma'>,</span> <span class='id identifier rubyid_reply'>reply</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_hmac_md5'>hmac_md5</span><span class='lparen'>(</span><span class='id identifier rubyid_nonce'>nonce</span><span class='comma'>,</span> <span class='id identifier rubyid_secret'>secret</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_algorithm'>algorithm</span> <span class='op'>=</span> <span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>Digest</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>md5</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_digest'>digest</span> <span class='op'>=</span> <span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>HMAC</span><span class='period'>.</span><span class='id identifier rubyid_digest'>digest</span><span class='lparen'>(</span><span class='id identifier rubyid_algorithm'>algorithm</span><span class='comma'>,</span> <span class='id identifier rubyid_secret'>secret</span><span class='comma'>,</span> <span class='id identifier rubyid_nonce'>nonce</span><span class='rparen'>)</span>
+    <span class='const'>Base64</span><span class='period'>.</span><span class='id identifier rubyid_encode64'>encode64</span><span class='lparen'>(</span><span class='id identifier rubyid_digest'>digest</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_chomp'>chomp</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_init_transport'>init_transport</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_transport'>transport</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:transport</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="WebSocket.html" title="Satori::RTM::WebSocket (class)">WebSocket</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="WebSocket.html#initialize-instance_method" title="Satori::RTM::WebSocket#initialize (method)">new</a></span></span>
+    <span class='id identifier rubyid_transport'>transport</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='symbol'>:open</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_method'>method</span><span class='lparen'>(</span><span class='symbol'>:on_websocket_open</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_transport'>transport</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='symbol'>:message</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_method'>method</span><span class='lparen'>(</span><span class='symbol'>:on_websocket_message</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_transport'>transport</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='symbol'>:close</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_method'>method</span><span class='lparen'>(</span><span class='symbol'>:on_websocket_close</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_transport'>transport</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_safe_call'>safe_call</span><span class='lparen'>(</span><span class='id identifier rubyid_fn'>fn</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_fn'>fn</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='kw'>rescue</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='lparen'>(</span><span class='id identifier rubyid_e'>e</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="authenticate-instance_method">
+  
+    #<strong>authenticate</strong>(role, secret) {|reply| ... } &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Authenticates a user with specific role and secret.</p>
+
+<p>Authentication is based on the <code>HMAC</code> algorithm with
+<code>MD5</code> hashing routine:</p>
+<ul><li>
+<p>The SDK obtains a nonce from the RTM in a handshake request</p>
+</li><li>
+<p>The SDK then sends an authorization request with its role secret key hashed
+with the received nonce</p>
+</li></ul>
+
+<p>If authentication is failed then reason is passed to the yield block. In
+case of success the <code>rtm/authenticate</code> reply is passed to the
+yield block.</p>
+
+<p>Use Dev Portal to obtain the role and secret key for your application.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_authenticate'>authenticate</span> <span class='id identifier rubyid_role'>role</span><span class='comma'>,</span> <span class='id identifier rubyid_role_secret'>role_secret</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_reply'>reply</span><span class='op'>|</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Failed to authenticate: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_reply'>reply</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:error</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> -- </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_reply'>reply</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:reason</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_reply'>reply</span><span class='period'>.</span><span class='id identifier rubyid_success?'>success?</span>
+<span class='kw'>end</span>
+<span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_wait_all_replies'>wait_all_replies</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>role</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>role name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>secret</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>role secret</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>Callback for an RTM reply</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>reply</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="BaseReply.html" title="Satori::RTM::BaseReply (class)">BaseReply</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>RTM reply for authenticate request</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/satori-rtm-sdk/client.rb', line 341</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_authenticate'>authenticate</span><span class='lparen'>(</span><span class='id identifier rubyid_role'>role</span><span class='comma'>,</span> <span class='id identifier rubyid_secret'>secret</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_handshake_opts'>handshake_opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+    <span class='label'>method:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>role_secret</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='label'>data:</span> <span class='lbrace'>{</span> <span class='label'>role:</span> <span class='id identifier rubyid_role'>role</span> <span class='rbrace'>}</span>
+  <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_send_r'>send_r</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>auth/handshake</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_handshake_opts'>handshake_opts</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_reply'>reply</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_reply'>reply</span><span class='period'>.</span><span class='id identifier rubyid_success?'>success?</span>
+      <span class='id identifier rubyid_hash'>hash</span> <span class='op'>=</span> <span class='id identifier rubyid_hmac_md5'>hmac_md5</span><span class='lparen'>(</span><span class='id identifier rubyid_reply'>reply</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:data</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:nonce</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_secret'>secret</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_authenticate_opts'>authenticate_opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+        <span class='label'>method:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>role_secret</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+        <span class='label'>credentials:</span> <span class='lbrace'>{</span> <span class='label'>hash:</span> <span class='id identifier rubyid_hash'>hash</span> <span class='rbrace'>}</span>
+      <span class='rbrace'>}</span>
+      <span class='id identifier rubyid_send_r'>send_r</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>auth/authenticate</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_authenticate_opts'>authenticate_opts</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_auth_reply'>auth_reply</span><span class='op'>|</span>
+        <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_auth_reply'>auth_reply</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>else</span>
+      <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_reply'>reply</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="close-instance_method">
+  
+    #<strong>close</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Closes gracefully the connection to Satori RTM.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+77
+78
+79</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/satori-rtm-sdk/client.rb', line 77</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_close'>close</span>
+  <span class='ivar'>@transport</span><span class='period'>.</span><span class='id identifier rubyid_close'>close</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="connect-instance_method">
+  
+    #<strong>connect</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Connects to Satori RTM.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="ConnectionError.html" title="Satori::RTM::ConnectionError (class)">ConnectionError</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>network error occurred when connecting</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41
+42
+43
+44
+45
+46
+47</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/satori-rtm-sdk/client.rb', line 39</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_connect'>connect</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ConnectionError.html" title="Satori::RTM::ConnectionError (class)">ConnectionError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Client is a single-use object. You can&#39;t connect twice.</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@state</span> <span class='op'>!=</span> <span class='symbol'>:init</span>
+  <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>connecting to </span><span class='embexpr_beg'>#{</span><span class='ivar'>@url</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='ivar'>@transport</span><span class='period'>.</span><span class='id identifier rubyid_connect'>connect</span><span class='lparen'>(</span><span class='ivar'>@url</span><span class='rparen'>)</span>
+<span class='kw'>rescue</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+  <span class='comment'># generate websocket close event
+</span>  <span class='id identifier rubyid_on_websocket_close'>on_websocket_close</span><span class='lparen'>(</span><span class='int'>1006</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Connect exception: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='id identifier rubyid_e'>e</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="connected?-instance_method">
+  
+    #<strong>connected?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns <code>true</code> if the client is connected.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p><code>true</code> if connected, <code>false</code> otherwise</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+71
+72
+73</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/satori-rtm-sdk/client.rb', line 71</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_connected?'>connected?</span>
+  <span class='ivar'>@state</span> <span class='op'>==</span> <span class='symbol'>:open</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete-instance_method">
+  
+    #<strong>delete</strong>(channel) {|reply| ... } &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Deletes the value of the specified key from the key-value store.</p>
+
+<p>Key is represented by a channel, and only the last message in the channel
+is relevant (represents the value). Hence, publishing a <code>null</code>
+value, serves as deletion of the the previous value (if any). Delete
+request is the same as publishing or writing a null value to the channel.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>name of the channel</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>Callback for an RTM reply. If the block is not given, then no reply will be
+sent to a client, regardless of the outcome</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>reply</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="BaseReply.html" title="Satori::RTM::BaseReply (class)">BaseReply</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>RTM reply for delete request</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+244
+245
+246
+247</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/satori-rtm-sdk/client.rb', line 244</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_channel'>channel</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_delete_opts'>delete_opts</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>channel:</span> <span class='id identifier rubyid_channel'>channel</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_send_r'>send_r</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rtm/delete</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_delete_opts'>delete_opts</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="onclose-instance_method">
+  
+    #<strong>onclose</strong> {|close_event| ... } &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Defines a callback to call when the client is disconnected or not able to
+connect to Satori RTM.</p>
+
+<p>If a client is not able to connect, a <code>onclose</code> yields too with
+a reason.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>Calls when client is disconnected or not able to connect</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>close_event</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="CloseEvent.html" title="Satori::RTM::CloseEvent (class)">CloseEvent</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>reason why client was closed</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+64
+65
+66</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/satori-rtm-sdk/client.rb', line 64</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_onclose'>onclose</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_on'>on</span> <span class='symbol'>:close</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="onopen-instance_method">
+  
+    #<strong>onopen</strong> { ... } &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Defines a callback to call when the client is successfully connected to
+Satori RTM.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>Calls when client is connected</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/satori-rtm-sdk/client.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_onopen'>onopen</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_on'>on</span> <span class='symbol'>:open</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="publish-instance_method">
+  
+    #<strong>publish</strong>(channel, message) {|reply| ... } &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Publishes a message to a channel.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>name of the channel</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>message</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>message to publish</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>Callback for an RTM reply. If the block is not given, then no reply will be
+sent to a client, regardless of the outcome</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>reply</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="BaseReply.html" title="Satori::RTM::BaseReply (class)">BaseReply</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>RTM reply for delete request</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+187
+188
+189
+190
+191
+192
+193</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/satori-rtm-sdk/client.rb', line 187</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_publish'>publish</span><span class='lparen'>(</span><span class='id identifier rubyid_channel'>channel</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_publish_opts'>publish_opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+    <span class='label'>channel:</span> <span class='id identifier rubyid_channel'>channel</span><span class='comma'>,</span>
+    <span class='label'>message:</span> <span class='id identifier rubyid_message'>message</span>
+  <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_send_r'>send_r</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rtm/publish</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_publish_opts'>publish_opts</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="read-instance_method">
+  
+    #<strong>read</strong>(channel, opts = {}) {|reply| ... } &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Reads a message in a channel.</p>
+
+<p>RTM returns the message at the position specified in the request. If there
+is no position specified, RTM defaults to the position of the latest
+message in the channel. A <code>null</code> message in the reply PDU means
+that there were no messages at that position.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>name of the channel</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional options for <code>rtm/read</code> request</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>Callback for an RTM reply. If the block is not given, then no reply will be
+sent to a client, regardless of the outcome</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>reply</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="BaseReply.html" title="Satori::RTM::BaseReply (class)">BaseReply</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>RTM reply for delete request</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+208
+209
+210
+211</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/satori-rtm-sdk/client.rb', line 208</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_channel'>channel</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_read_opts'>read_opts</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span> <span class='label'>channel:</span> <span class='id identifier rubyid_channel'>channel</span>
+  <span class='id identifier rubyid_send_r'>send_r</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rtm/read</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_read_opts'>read_opts</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sock_read-instance_method">
+  
+    #<strong>sock_read</strong>(opts = {})  &#x21d2; <tt>:ok</tt>, <tt>:timeout</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Reads from an WebSocket with an optional timeout.</p>
+
+<p>If timeout is greater than zero, it specifies a maximum interval (in
+seconds) to wait for any incoming WebSocket frames. If timeout is zero,
+then the method returns without blocking. If the timeout is less than zero,
+the method blocks indefinitely.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>opts</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:timeout_in_secs</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>-1</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>timeout for a read operation</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>:ok</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>read successfully reads data from WebSocket</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>:timeout</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a blocking operation times out</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="ConnectionError.html" title="Satori::RTM::ConnectionError (class)">ConnectionError</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>network error occurred when reading data</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+94
+95
+96
+97
+98
+99
+100
+101</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/satori-rtm-sdk/client.rb', line 94</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sock_read'>sock_read</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_timeout_in_secs'>timeout_in_secs</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:timeout_in_secs</span><span class='comma'>,</span> <span class='op'>-</span><span class='int'>1</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_timeout_in_secs'>timeout_in_secs</span> <span class='op'>&gt;=</span> <span class='int'>0</span>
+    <span class='ivar'>@transport</span><span class='period'>.</span><span class='id identifier rubyid_read_with_timeout'>read_with_timeout</span><span class='lparen'>(</span><span class='id identifier rubyid_timeout_in_secs'>timeout_in_secs</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@transport</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sock_read_nonblock-instance_method">
+  
+    #<strong>sock_read_nonblock</strong>  &#x21d2; <tt>:ok</tt>, <tt>:would_block</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Reads from an WebSocket in a non-blocking mode.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>:ok</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>read successfully reads data from WebSocket</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>:would_block</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>read buffer is empty</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="ConnectionError.html" title="Satori::RTM::ConnectionError (class)">ConnectionError</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>network error occurred when reading data</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+108
+109
+110</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/satori-rtm-sdk/client.rb', line 108</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sock_read_nonblock'>sock_read_nonblock</span>
+  <span class='ivar'>@transport</span><span class='period'>.</span><span class='id identifier rubyid_read_nonblock'>read_nonblock</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sock_read_repeatedly-instance_method">
+  
+    #<strong>sock_read_repeatedly</strong>(opts = {})  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Reads repeatedly from an WebSocket.</p>
+
+<p>This method repeatedly reads from an WebSocket during a specified time (in
+seconds). If duration time is greater then zero, then the method blocks for
+the duration time and reads repeatedly all incoming WebSocket frames. If
+duration time is less than zero, the method blocks indefinitely.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>opts</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:duration_in_secs</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>-1</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>duration interval</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="ConnectionError.html" title="Satori::RTM::ConnectionError (class)">ConnectionError</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>network error occurred when reading data</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+125
+126
+127
+128
+129
+130
+131
+132
+133</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/satori-rtm-sdk/client.rb', line 125</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sock_read_repeatedly'>sock_read_repeatedly</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_duration_in_secs'>duration_in_secs</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:duration_in_secs</span><span class='comma'>,</span> <span class='op'>-</span><span class='int'>1</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_start'>start</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
+  <span class='id identifier rubyid_loop'>loop</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_diff'>diff</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='op'>-</span> <span class='id identifier rubyid_start'>start</span><span class='rparen'>)</span>
+    <span class='kw'>break</span> <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_duration_in_secs'>duration_in_secs</span> <span class='op'>&gt;=</span> <span class='int'>0</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_duration_in_secs'>duration_in_secs</span> <span class='op'>&lt;=</span> <span class='id identifier rubyid_diff'>diff</span><span class='rparen'>)</span>
+    <span class='ivar'>@transport</span><span class='period'>.</span><span class='id identifier rubyid_read_with_timeout'>read_with_timeout</span><span class='lparen'>(</span><span class='id identifier rubyid_duration_in_secs'>duration_in_secs</span> <span class='op'>-</span> <span class='id identifier rubyid_diff'>diff</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="subscribe-instance_method">
+  
+    #<strong>subscribe</strong>(sid, opts = {}) {|ctx, event| ... } &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Subscribes to a channel</p>
+
+<p>When you create a subscription, you can specify additional subscription
+options (e.g. history or view). Full list of subscription option you could
+find in RTM API specification.</p>
+
+<p>Satori SDK informs an user about any subscription state changes by calling
+block with proper event.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_subscribe'>subscribe</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>animals</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid__ctx'>_ctx</span><span class='comma'>,</span> <span class='id identifier rubyid_event'>event</span><span class='op'>|</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_event'>event</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span>
+  <span class='kw'>when</span> <span class='symbol'>:subscribed</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Subscribed to the channel: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_event'>event</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:subscription_id</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>when</span> <span class='symbol'>:data</span>
+    <span class='id identifier rubyid_event'>event</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:messages</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_msg'>msg</span><span class='op'>|</span> <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Message is received </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_msg'>msg</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+  <span class='kw'>when</span> <span class='symbol'>:error</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Subscription error: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_event'>event</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:error</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> -- </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_event'>event</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:reason</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>sid</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>subscription id</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional options for <code>rtm/subscribe</code> request</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>RTM subscription callback</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>ctx</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="SubscriptionContext.html" title="Satori::RTM::SubscriptionContext (class)">SubscriptionContext</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>current subscription context</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>event</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="SubscriptionEvent.html" title="Satori::RTM::SubscriptionEvent (class)">SubscriptionEvent</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>subscription event</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="SubscriptionEvent.html" title="Satori::RTM::SubscriptionEvent (class)">Information about subscription events</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/satori-rtm-sdk/client.rb', line 276</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_subscribe'>subscribe</span><span class='lparen'>(</span><span class='id identifier rubyid_sid'>sid</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request_opts'>request_opts</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span> <span class='label'>subscription_id:</span> <span class='id identifier rubyid_sid'>sid</span>
+  <span class='id identifier rubyid_request_opts'>request_opts</span><span class='lbracket'>[</span><span class='symbol'>:channel</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_sid'>sid</span> <span class='kw'>unless</span> <span class='qsymbols_beg'>%i[</span><span class='tstring_content'>filter</span><span class='words_sep'> </span><span class='tstring_content'>view</span><span class='words_sep'>]</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_context'>context</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SubscriptionContext.html" title="Satori::RTM::SubscriptionContext (class)">SubscriptionContext</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SubscriptionContext.html#initialize-instance_method" title="Satori::RTM::SubscriptionContext#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_sid'>sid</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span><span class='comma'>,</span> <span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_init_reply'>init_reply</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SubscriptionEvent.html" title="Satori::RTM::SubscriptionEvent (class)">SubscriptionEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SubscriptionEvent.html#initialize-instance_method" title="Satori::RTM::SubscriptionEvent#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:init</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_fn'>fn</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_context'>context</span><span class='comma'>,</span> <span class='id identifier rubyid_init_reply'>init_reply</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rtm/subscribe</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_request_opts'>request_opts</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='op'>|</span>
+    <span class='id identifier rubyid_reply'>reply</span> <span class='op'>=</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_handle_data'>handle_data</span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='ivar'>@subscriptions</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_sid'>sid</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@subscriptions</span><span class='lbracket'>[</span><span class='id identifier rubyid_sid'>sid</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='id identifier rubyid_context'>context</span>
+      <span class='id identifier rubyid_prev_sub'>prev_sub</span> <span class='op'>=</span> <span class='ivar'>@subscriptions</span><span class='lbracket'>[</span><span class='id identifier rubyid_sid'>sid</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_prev_sub'>prev_sub</span><span class='period'>.</span><span class='id identifier rubyid_mark_as_resubscribed'>mark_as_resubscribed</span>
+    <span class='kw'>end</span>
+
+    <span class='ivar'>@subscriptions</span><span class='lbracket'>[</span><span class='id identifier rubyid_sid'>sid</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_context'>context</span> <span class='kw'>if</span> <span class='id identifier rubyid_reply'>reply</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='symbol'>:subscribed</span>
+
+    <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_fn'>fn</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_context'>context</span><span class='comma'>,</span> <span class='id identifier rubyid_reply'>reply</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unsubscribe-instance_method">
+  
+    #<strong>unsubscribe</strong>(sid) {|reply| ... } &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Unsubscribes the subscription with the specific
+<code>subscription_id</code></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>sid</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>subscription id</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>Callback for an RTM reply</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>reply</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="BaseReply.html" title="Satori::RTM::BaseReply (class)">BaseReply</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>RTM reply for authenticate request</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/satori-rtm-sdk/client.rb', line 305</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_unsubscribe'>unsubscribe</span><span class='lparen'>(</span><span class='id identifier rubyid_sid'>sid</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request_opts'>request_opts</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>subscription_id:</span> <span class='id identifier rubyid_sid'>sid</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rtm/unsubscribe</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_request_opts'>request_opts</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='op'>|</span>
+    <span class='id identifier rubyid_context'>context</span> <span class='op'>=</span> <span class='ivar'>@subscriptions</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_sid'>sid</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_context'>context</span>
+      <span class='id identifier rubyid_reply'>reply</span> <span class='op'>=</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_handle_data'>handle_data</span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_fn'>fn</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_context'>context</span><span class='comma'>,</span> <span class='id identifier rubyid_reply'>reply</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='comment'># pass base reply to unsubscribe block
+</span>    <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="BaseReply.html" title="Satori::RTM::BaseReply (class)">BaseReply</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="BaseReply.html#initialize-instance_method" title="Satori::RTM::BaseReply#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="wait_all_replies-instance_method">
+  
+    #<strong>wait_all_replies</strong>(opts = {})  &#x21d2; <tt>:ok</tt>, <tt>:timeout</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>if user&#39;s callback for a reply sends new RTM request</p>
+</div>
+  </div>
+
+
+<p>Wait for all RTM replies for all pending requests.</p>
+
+<p>This method blocks until all RTM replies are received for all pending
+requests.</p>
+
+<p>If timeout is greater than zero, it specifies a maximum interval (in
+seconds) to wait for any incoming WebSocket frames.  If the timeout is less
+than zero, the method blocks indefinitely.</p>
+
+<p>then this method waits it too.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>opts</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:timeout_in_secs</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>-1</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>timeout for an operation</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>:ok</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>all replies are received</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>:timeout</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a blocking operation times out</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="ConnectionError.html" title="Satori::RTM::ConnectionError (class)">ConnectionError</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>network error occurred when reading data</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/satori-rtm-sdk/client.rb', line 154</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_wait_all_replies'>wait_all_replies</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_timeout_in_secs'>timeout_in_secs</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:timeout_in_secs</span><span class='comma'>,</span> <span class='op'>-</span><span class='int'>1</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_start'>start</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
+  <span class='id identifier rubyid_rc'>rc</span> <span class='op'>=</span> <span class='symbol'>:ok</span>
+  <span class='id identifier rubyid_loop'>loop</span> <span class='kw'>do</span>
+    <span class='kw'>break</span> <span class='kw'>if</span> <span class='ivar'>@waiters</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_timeout_in_secs'>timeout_in_secs</span> <span class='op'>&gt;=</span> <span class='int'>0</span>
+      <span class='id identifier rubyid_diff'>diff</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='op'>-</span> <span class='id identifier rubyid_start'>start</span><span class='rparen'>)</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_timeout_in_secs'>timeout_in_secs</span> <span class='op'>&lt;=</span> <span class='id identifier rubyid_diff'>diff</span>
+        <span class='id identifier rubyid_rc'>rc</span> <span class='op'>=</span> <span class='symbol'>:timeout</span>
+        <span class='kw'>break</span>
+      <span class='kw'>end</span>
+      <span class='ivar'>@transport</span><span class='period'>.</span><span class='id identifier rubyid_read_with_timeout'>read_with_timeout</span><span class='lparen'>(</span><span class='id identifier rubyid_timeout_in_secs'>timeout_in_secs</span> <span class='op'>-</span> <span class='id identifier rubyid_diff'>diff</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='ivar'>@transport</span><span class='period'>.</span><span class='id identifier rubyid_read_with_timeout'>read_with_timeout</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_rc'>rc</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="write-instance_method">
+  
+    #<strong>write</strong>(channel, message) {|reply| ... } &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Writes the value of the specified key from the key-value store.</p>
+
+<p>Key is represented by a channel. In current RTM implementation write
+operation is the same as publish operation.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>name of the channel</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>message</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>message to write</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>Callback for an RTM reply. If the block is not given, then no reply will be
+sent to a client, regardless of the outcome</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>reply</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="BaseReply.html" title="Satori::RTM::BaseReply (class)">BaseReply</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>RTM reply for delete request</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+224
+225
+226
+227
+228
+229
+230</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/satori-rtm-sdk/client.rb', line 224</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span><span class='id identifier rubyid_channel'>channel</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_write_opts'>write_opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+    <span class='label'>channel:</span> <span class='id identifier rubyid_channel'>channel</span><span class='comma'>,</span>
+    <span class='label'>message:</span> <span class='id identifier rubyid_message'>message</span>
+  <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_send_r'>send_r</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rtm/write</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_write_opts'>write_opts</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_fn'>fn</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Aug 25 19:04:12 2017 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.9 (ruby-2.4.1).
+</div>
+
+    </div>
+  </body>
+</html>
