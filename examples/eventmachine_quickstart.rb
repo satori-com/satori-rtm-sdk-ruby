@@ -96,7 +96,7 @@ def message
   { who: 'zebra', where: [latitude, longitude] }
 end
 
-def run_publish_loop(client)
+def publish_repeatedly(client)
   EM.add_periodic_timer 2 do
     client.publish 'animals', message do |reply|
       if reply.success?
@@ -116,7 +116,7 @@ def run_client(endpoint, appkey, state)
   client.onopen do
     puts 'Connected to Satori RTM!'
     subscribe(client, state)
-    publish_timer = run_publish_loop(client)
+    publish_timer = publish_repeatedly(client)
   end
 
   client.onclose do

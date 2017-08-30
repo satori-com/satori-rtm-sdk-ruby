@@ -45,7 +45,7 @@ def message
   { who: 'zebra', where: [latitude, longitude] }
 end
 
-def publish(client)
+def publish_repeatedly(client)
   loop do
     client.publish 'animals', message do |reply|
       if reply.success?
@@ -57,7 +57,6 @@ def publish(client)
     client.wait_all_replies
 
     client.sock_read_repeatedly duration_in_secs: 2
-    client.transport.close
   end
 end
 
@@ -66,7 +65,7 @@ def run_client(endpoint, appkey, state)
   client.connect
 
   subscribe(client, state)
-  publish(client)
+  publish_repeatedly(client)
 end
 
 state = {}
