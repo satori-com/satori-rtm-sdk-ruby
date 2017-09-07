@@ -9,6 +9,7 @@ role = 'YOUR_ROLE'
 role_secret = 'YOUR_SECRET'
 
 # Check if the role is set to authenticate or not
+# If an actual role isn't specified, no authentication is needed.
 should_authenticate = (role != 'YOUR_ROLE')
 
 puts 'RTM client config:'
@@ -44,16 +45,18 @@ if should_authenticate
   client.wait_all_replies
 end
 
+# Subscribe with an event handler
 client.subscribe 'animals' do |_ctx, event|
   case event.type
   when :subscribed
-    # When subscription is established (confirmed by Satori RTM)
+    # When the client receives a response from RTM, indicating that the
+    # subscription was successful
     puts "Subscribed to the channel: #{event.data[:subscription_id]}"
   when :data
-    # Messages arrive in an array
+    # When the client receives new messages published to the channel
     event.data[:messages].each { |msg| puts "Animal is received #{msg}" }
   when :error
-    # When a subscribe error occurs
+    # When a subscription error occurs
     puts "Subscription error: #{event.data[:error]} -- #{event.data[:reason]}"
   end
 end
@@ -64,10 +67,12 @@ client.wait_all_replies
 rnd = Random.new
 
 loop do
+  # Create a message containing the "location" of an animal
   latitude = 34.13 + (rnd.rand / 100)
   longitude = -118.32 + (rnd.rand / 100)
   animal = { who: 'zebra', where: [latitude, longitude] }
 
+  # Publish the message
   client.publish 'animals', animal do |reply|
     if reply.success?
       puts "Animal is published: #{animal}"
